@@ -15,6 +15,8 @@ import { Component } from '@angular/core';
   Last name: <input type="text" [(ngModel)]="lname" />
 
   Full name: {{fname}} {{lname}}
+
+  <my-directive>......</my-directive>
   `,
   styles: [`
   h4{

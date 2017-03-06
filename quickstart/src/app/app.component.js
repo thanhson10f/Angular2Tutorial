@@ -24,7 +24,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>Hello {{name}}</h1>\n  <my-tutorial>Loading...</my-tutorial>\n  <img [src]=\"image\"/>\n  <input type=\"text\" [value]=\"trans\" #inputText/>\n  <h3 [class.title]=\"is_apply\">Test Apply Class</h3>\n  <h5 [style.color]=\"isBlue?'blue':'orange'\">Test Style binding</h5>\n\n  <input type=\"button\" value=\"Event binding\" (click)=\"OpenWindow(inputText.value)\"/>\n  <h2>Two way binding</h2>\n  First name: <input type=\"text\" [(ngModel)]=\"fname\" />\n  Last name: <input type=\"text\" [(ngModel)]=\"lname\" />\n\n  Full name: {{fname}} {{lname}}\n  ",
+            template: "<h1>Hello {{name}}</h1>\n  <my-tutorial>Loading...</my-tutorial>\n  <img [src]=\"image\"/>\n  <input type=\"text\" [value]=\"trans\" #inputText/>\n  <h3 [class.title]=\"is_apply\">Test Apply Class</h3>\n  <h5 [style.color]=\"isBlue?'blue':'orange'\">Test Style binding</h5>\n\n  <input type=\"button\" value=\"Event binding\" (click)=\"OpenWindow(inputText.value)\"/>\n  <h2>Two way binding</h2>\n  First name: <input type=\"text\" [(ngModel)]=\"fname\" />\n  Last name: <input type=\"text\" [(ngModel)]=\"lname\" />\n\n  Full name: {{fname}} {{lname}}\n\n  <my-directive>......</my-directive>\n  ",
             styles: ["\n  h4{\n    color: blue;\n  }\n\n  .title{\n    color: red;\n    font-weight: bold;\n  }\n  "]
         }), 
         __metadata('design:paramtypes', [])
