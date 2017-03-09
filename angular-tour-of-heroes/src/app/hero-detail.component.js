@@ -13,7 +13,6 @@ var router_1 = require('@angular/router');
 var common_1 = require('@angular/common'); //The service to control the address bar, related to location.href in javascript
 require('rxjs/add/operator/switchMap');
 var hero_service_1 = require('./hero.service');
-var hero_1 = require('./hero');
 var HeroDetailComponent = (function () {
     function HeroDetailComponent(heroService, route, location) {
         this.heroService = heroService;
@@ -29,14 +28,12 @@ var HeroDetailComponent = (function () {
     HeroDetailComponent.prototype.goBack = function () {
         this.location.back();
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', hero_1.Hero)
-    ], HeroDetailComponent.prototype, "hero", void 0);
     HeroDetailComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'my-hero-detail',
-            template: "\n    <div *ngIf=\"hero\">\n        <h2>{{hero.name}} details!</h2>\n        <div><label>id: </label>{{hero.id}}</div>\n        <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n        </div>\n    </div>\n    <button (click)=\"goBack()\">Back</button>\n    "
+            template: "\n    <div *ngIf=\"hero\">\n        <h2>{{hero.name}} details!</h2>\n        <div><label>id: </label>{{hero.id}}</div>\n        <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n        </div>\n    </div>\n    <button (click)=\"goBack()\">Back</button>\n    ",
+            styleUrls: ['./hero-detail.component.css']
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.ActivatedRoute, common_1.Location])
     ], HeroDetailComponent);
